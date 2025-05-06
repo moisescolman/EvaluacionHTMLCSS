@@ -307,7 +307,7 @@ p {
 
 form {
     padding: 1rem;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 100%;
 }
 label {
@@ -339,7 +339,7 @@ textarea {
     padding-right: 0.2rem;
 }
 .campo {
-
+    /* border: blue solid 1px; */
 }
 .formulario-contacto {
     min-width: 10rem;
