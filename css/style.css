@@ -136,6 +136,9 @@ main {
 a {
     text-decoration: none;
 }
+p {
+    font-family: Jost;
+}
 
 .hero {
     position: relative;
@@ -309,21 +312,41 @@ form {
 }
 label {
     width: 100%;
+    font-family: Jost;
 }
 input {
     /* margin: 1rem; */
     width: 100%;
     min-height: 2rem;
     margin-bottom: 1rem;
+    font-family: Jost;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+}
+input[type="checkbox"] {
+    color: var(--color-secundario);
+    text-align: left;
+}
+
+textarea {
+    color: var(--color-secundario);
+    text-align: left;
+    width: 100%;
+    min-height: 2rem;
+    margin-bottom: 1rem;
+    font-family: Jost;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
 }
 .campo {
-    /* border: green 2px solid; */
+
 }
 .formulario-contacto {
     min-width: 10rem;
     width: 50%;
     margin: 2rem auto;
     padding: 0 1rem;
+    display: inline-block;
 }
 .formulario-registro {
     max-width: 30rem;
@@ -347,10 +370,22 @@ main-detalle {
     .grid-eventos {
         grid-template-columns: repeat(2, 1fr);
     }
-}
+} 
 
 @media (min-width: 1280px) {
     .grid-eventos {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 720px) {
+    .hero-texto h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-texto p {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
     }
 }
