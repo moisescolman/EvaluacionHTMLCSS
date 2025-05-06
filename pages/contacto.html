@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Streavent</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <nav id="navprincipal">
+        <div class="logoimg">
+            <p>STREAVENT</p>
+        </div>
+        <div class="menubar">
+            <ul>
+                <li><a href="./index.html>Inicio" </a></li>
+                <li><a href="eventos.html">Eventos</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+
+    </nav>
+    <header id="main-header" class="main-header">
+
+        <h1 id="h1titulo">Contacto</h1>
+        <p>Envíanos tus comentarios, consultas y opiniones</p>
+
+    </header>
+
+    <main>
+        <section class="formulario-contacto" style="max-width: 30rem; margin: 2rem auto; padding: 0 1rem;">
+            <h2>Contacto</h2>
+            <form action="#" method="get" novalidate>
+                    <label for="nombre-contacto">Nombre</label>
+                    <input type="text" id="nombre-contacto" name="nombre" placeholder="Tu nombre completo" required />
+
+                    <label for="email-contacto">Email</label>
+                    <input type="email" id="email-contacto" name="email" placeholder="usuario@ejemplo.com" required />
+
+   
+
+                    <label for="asunto-contacto">Asunto</label>
+                    <input type="text" id="asunto-contacto" name="asunto" placeholder="Motivo de tu mensaje" required />
+
+                    <label for="mensaje-contacto">Mensaje</label>
+                    <textarea id="mensaje-contacto" name="mensaje" rows="5" placeholder="Escribe aquí tu mensaje"
+                        required></textarea>
+
+                    <input type="checkbox" id="aceptar-politica-contacto" name="aceptar-politica" required />
+                    <label for="aceptar-politica-contacto">
+                        Acepto la <a href="#" target="_blank">Política de Privacidad</a>
+                    </label>
+
+                <button type="submit" class="boton-reserva" style="width:100%; margin-top:1rem;">
+                    Enviar
+                </button>
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>
