@@ -4,28 +4,35 @@
     font-style: normal;
     font-weight: normal;
 }
+
 @font-face {
     font-family: 'Raleway';
     src: url("../fonts/Raleway-Regular.ttf") format('truetype');
     font-style: normal;
     font-weight: normal;
 }
+
 @font-face {
     font-family: 'Jost';
     src: url("../fonts/Jost-Regular.ttf") format('truetype');
     font-style: normal;
     font-weight: normal;
 }
+
 :root {
     --color-fondo: #F9F9F9;
-    --color-primario: #2e163d;
-    --color-secundario: #E67E22;
-    --color-acento: #16A085;
+    --color-primario: #341b49;
+    --color-secundario: #8d068d;
+    --color-acento: #ff9e0c;
     --color-texto: #333333;
+    --color-gris: #a0a0a0;
     --color-blanco: #FFFFFF;
 
+    --fuente-principal: Raleway;
+    --fuente-secundaria: RalewayBold;
+
     --espacio: 1rem;
-    --radio-borde: 0.5rem;
+
 }
 
 
@@ -36,82 +43,314 @@
 }
 
 
+
 body {
-    font-family: Raleway;
+    font-family: var(--fuente-principal);
     background-color: var(--color-fondo);
     color: var(--color-texto);
     line-height: 1.5;
 }
-nav {
-    border: 2px red solid;
-    display: flex;
-    justify-content: space-between;
+
+
+.nav-principal {
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color: var(--color-primario);
     color: var(--color-blanco);
-    min-height: 3rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 0.5rem;
-}
-li {
-    display: inline;
+    z-index: 1000;
+    font-size: 1rem;
     color: var(--color-blanco);
-    margin-left: 1rem;
-
+    /* border: 0.2rem solid var(--color-acento) */
 }
-a {
+
+.nav-principal .contenedor-nav {
+    max-width: 75rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+}
+
+.nav-principal .nav-izquierda {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-principal .marca a {
+    color: var(--color-blanco);
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-principal .menu-principal {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-principal .menu-principal li {
+    position: relative;
+}
+
+.nav-principal .menu-principal li a {
+    display: block;
+    padding: 0.5rem 1rem;
     color: var(--color-blanco);
     text-decoration: none;
+    transition: background-color 0.3s ease;
+}
 
+.nav-principal .menu-principal li a:hover {
+    background-color: var(--color-acento);
 }
-h1 {
-    font-family: RalewayBold;
+
+
+
+
+.nav-principal .nav-derecha {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-principal .nav-derecha .btn-nav {
+    background-color: var(--color-secundario);
     color: var(--color-blanco);
-    font-size: 2rem;
-}
-h2 {
-    font-family: RalewayBold;
-    color: var(--color-acento);
-    font-size: 1.7rem;
-}
-h3 {
-    font-family: RalewayBold;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
     font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
-p {
-    font-family: Jost;
+
+.nav-principal .nav-derecha .btn-nav:hover {
+    background-color: var(--color-acento);
 }
-.main-header {
-    background-image: url("../img/main_hero_bg.jpg");
-    object-fit: cover;
-    min-height: 10rem;
-    border: 2px red solid;
-    text-align: center;
+
+
+main {
+    padding-top: 6rem
+}
+a {
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 30rem;
 
 }
-.h1titulo {
-    color: var(--color-primario);
+
+.hero-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-footer {
-    background-color: var(--color-primario);
-    min-height: 5rem;
-    position: relative;
-    bottom: 0;
-    left:0;
+
+.hero-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-}
-footer p {
+    background-color: rgba(54, 22, 53, 0.616);
+    padding: 2rem;
     color: var(--color-blanco);
 }
 
-.tarjeta-evento>img {
-    min-height: 2rem;
-    width: 20rem;
-    object-fit: cover   ;
+.hero-texto h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-texto p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-hero {
+    display: inline-block;
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: var(--color-acento);
+}
+
+
+.eventos-destacados {
+    max-width: 75rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.eventos-destacados h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .grid-eventos {
     display: grid;
-    gap: var(--espacio);
+    gap: 1rem;
     grid-template-columns: 1fr;
-  }
+}
+
+
+
+.tarjeta-evento {
+    background-color: var(--color-blanco);
+    overflow: hidden;
+    border: 0.2rem solid var(--color-acento);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    border: 0.1rem solid var(--color-gris);
+    
+}
+
+.tarjeta-evento:hover {
+    border: 0.15rem solid var(--color-secundario)
+}
+
+.tarjeta-evento img {
+    width: 100%;
+    display: block;
+}
+
+.tarjeta-detalle-evento{
+    background-color: var(--color-blanco);
+    overflow: hidden;
+    border: 0.2rem solid var(--color-acento);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    border: 0.1rem solid var(--color-gris);
+}
+
+
+.tarjeta-detalle-evento img {
+    width: 50%;
+    display: block;
+}
+
+.contenido-evento {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido-evento h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.contenido-evento p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.contenido-evento .datos {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    color: var(--color-primario);
+}
+
+.descripcion {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+
+
+
+.boton-detalles {
+    color: var(--color-blanco);
+    border: none;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    font-size: 0.9375rem;
+    width: 100%;
+    text-align: center;
+    background-color: var(--color-secundario);
+    margin-top: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+.boton-detalles:hover {
+    color: var(--color-blanco);
+    background-color:var(--color-acento);
+    margin-top: 0.5rem;
+}
+
+
+.pie-pagina {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    font-size: 0.9rem;
+}
+
+
+form {
+    padding: 1rem;
+    border: 2px solid red;
+    width: 100%;
+}
+label {
+    width: 100%;
+}
+input {
+    /* margin: 1rem; */
+    width: 100%;
+    min-height: 2rem;
+    margin-bottom: 1rem;
+}
+.campo {
+    /* border: green 2px solid; */
+}
+.formulario-contacto {
+    min-width: 10rem;
+    width: 50%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.formulario-registro {
+    max-width: 30rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.main-contacto {
+    display: flex;
+    justify-content: center;
+}
+main-detalle {
+    max-width: 60 rem;
+    margin: 2rem auto;
+    padding: 0.1rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (min-width: 768px) {
+    .grid-eventos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .grid-eventos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

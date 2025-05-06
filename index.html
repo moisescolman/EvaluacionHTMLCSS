@@ -1,77 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STREAVENT - Home</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SEVENT — Agenda de Eventos Locales</title>
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-<nav id="navprincipal">
-    <div class="logoimg">
-        <p>STREAVENT</p>
-    </div>
-    <div class="menubar">
-        <ul>
-            <li><a href="./index.html>Inicio"</a></li>
-            <li><a href="eventos.html">Eventos</a></li>
-            <li><a href="./pages/contacto.html">Contacto</a></li>
+  
+  <nav class="nav-principal">
+    <div class="contenedor-nav">
+      
+      <div class="nav-izquierda">
+        <div class="marca"><a href="./index.html">SEVENT</a></div>
+        <ul class="menu-principal">
+          <li><a href="pages/eventos.html">Eventos</a></li>
+          <!-- <li><a href="pages/destacados.html">Destacados</a></li> -->
+          <li><a href="pages/contacto.html">Contacto</a></li>
+
         </ul>
+      </div>
+
+      
+      <div class="nav-derecha">
+        <a href="pages/login.html" class="btn-nav">Iniciar Sesión</a>
+        <a href="pages/registro.html" class="btn-nav">Registrarse</a>
+      </div>
     </div>
+  </nav>
 
-</nav>
-<header id="main-header" class="main-header">
+  
+  <section class="hero">
+    <img src="./img/main_hero_bg.jpg" alt="Banner Sevent" class="hero-imagen" />
+    <div class="hero-texto">
+      <h1>Descubre los mejores eventos de tu zona</h1>
+      <p>Conéctate online y vive la experiencia!!</p>
+      <a href="pages/eventos.html" class="btn-hero">Ver todos los eventos</a>
+    </div>
+  </section>
 
-    <h1 id="h1titulo">Descubre los mejores eventos de tu zona</h1>
-    <p>Participa online</p>
+  
+  <section class="eventos-destacados">
+    <h2>Eventos Recomendados</h2>
 
-</header>
-<main>
-    
-    <section class="eventos-destacados">
-
-        <h2>Eventos Destacados</h2>
-        <div class="grid-eventos">
-          
-          <article class="tarjeta-evento">
-            <img src="./img/events-img/1.jpg" alt="Concierto de Jazz" />
-            <div class="contenido-evento">
-              <h3>Concierto de Jazz al Aire Libre</h3>
-              <p class="datos">12/05/2025 • Plaza Central</p>
-              <p>Una noche de jazz con músicos locales bajo las estrellas.</p>
-              <a href="pages/detalle-evento.html?id=1" class="boton-reserva">Ver detalles</a>
-            </div>
-          </article>
-         
-          <article class="tarjeta-evento">
-            <img src="./img/events-img/2.jpg" alt="Carrera Solidaria 5K" />
-            <div class="contenido-evento">
-              <h3>Carrera Solidaria 5K</h3>
-              <p class="datos">18/05/2025 • Ribera del Río</p>
-              <p>Carrera benefactora para ONG locales, todos los niveles bienvenidos.</p>
-              <a href="pages/detalle-evento.html?id=2" class="boton-reserva">Ver detalles</a>
-            </div>
-          </article>
-
-          <article class="tarjeta-evento">
-            <img src="./img/events-img/4.jpg" alt="Presentación de Libros de Autores Locales" />
-            <div class="contenido-evento">
-              <h3>Presentación de Libros de Autores Locales</h3>
-              <p class="datos">20/05/2025 • San Mamés</p>
-              <p>Presentación de libros de autores locales.</p>
-              <a href="pages/detalle-evento.html?id=2" class="boton-reserva">Ver detalles</a>
-            </div>
-          </article>
-          
+    <!-- aqui van los eventos -->
+    <div class="grid-eventos">
+      
+      <article class="tarjeta-evento">
+        <img src="img/events-img/1.avif" alt="Conferencia Internacional" />
+        <div class="contenido-evento">
+          <h3>Technarte Bilbao 2025</h3>
+          <p class="datos">16/05/2025 • Palacio Euskalduna</p>
+          <p>Artists, designers and researchers from all around the world meet to share their vision of the fusion between art and technology.</p>
+          <a href="pages/detalle-evento.html" class="boton-detalles">Ver detalles</a>
         </div>
-      </section>
+      </article>
+      
+      <article class="tarjeta-evento">
+        <img src="img/events-img/2.avif" alt="OROZKOROCK 2025" />
+        <div class="contenido-evento">
+          <h3>OROZKOROCK 2025</h3>
+          <p class="datos">24/05/2025 • Orozco</p>
+          <p>El quinto año de Orozkorock será la mayor fiesta rockera de todos estos años concentrado en un solo día, el sábado 24 de mayo.</p>
+          <a href="pages/detalle-evento.html" class="boton-detalles">Ver detalles</a>
+        </div>
+      </article>
 
+      <article class="tarjeta-evento">
+        <img src="img/events-img/3.avif" alt="Retiro de yoga y Terapia energética ShivaVibes MimateDay" />
+        <div class="contenido-evento">
+          <h3>Retiro de yoga</h3>
+          <p class="datos">24/05/2025 • Gautegiz Arteaga</p>
+          <p>Ven a disfrutar de un día de retiro de yoga y terapia energética con ShivaVibes para mimarte y recargar energías.</p>
+          <a href="https://www.eventbrite.es/e/entradas-retiro-de-yoga-y-terapia-energetica-shivavibes-mimateday-1320063668969?keep_tld=1" class="boton-detalles">Ver detalles</a>
+        </div>
+      </article>
 
-</main>
-<footer class="navfooter">
-    <p>&copy; 2025 STREAVENT</p>
+      <article class="tarjeta-evento">
+        <img src="img/events-img/4.avif" alt="SET CONGRESS" />
+        <div class="contenido-evento">
+          <h3>SET CONGRESS</h3>
+          <p class="datos">09/05/2025 • Bilbao Exhibition Centre</p>
+          <p>Ven a vivir la primera edición de un congreso único en Europa, que se celebrará en Bilbao el 9 de mayo de 2025.</p>
+          <a href="pages/detalle-evento.html" class="boton-detalles">Ver detalles</a>
+        </div>
+      </article>
 
-</footer>
-    
+      <article class="tarjeta-evento">
+        <img src="img/events-img/5.avif" alt="ZK Market" />
+        <div class="contenido-evento">
+          <h3>ZK Market</h3>
+          <p class="datos">18/05/2025 • La Terminal FICC</p>
+          <p>ZK Market La Terminal, el mercado de las pulgas de Bilbao. Ven y participa! 3 Zuloaga Ignacio Pintor Kalea 48014 Bilbo</p>
+          <a href="https://www.eventbrite.es/e/entradas-zk-market-1255445173309" class="boton-detalles">Ver detalles</a>
+        </div>
+      </article>
+
+       <article class="tarjeta-evento">
+        <img src="img/events-img/6.avif" alt="Club Flamenco" />
+        <div class="contenido-evento">
+          <h3>Club Flamenco</h3>
+          <p class="datos">24/05/2025 • La Terminal FICC</p>
+          <p>La bailaora granaína Eva Manzano visita de nuevo el Club Flamenco #hACERIA donde disfrutaremos de su maestría sobre nuestro Tablao.</p>
+          <a href="https://www.eventbrite.es/e/entradas-club-flamenco-haceria-mayo-2025-1244843443249" class="boton-detalles">Ver detalles</a>
+        </div>
+      </article>
+      
+      
+    </div>
+  </section>
+
+  
+  <footer class="pie-pagina">
+    <p>© 2025 Sevent</p>
+  </footer>
 </body>
 </html>

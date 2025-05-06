@@ -1,65 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Streavent</title>
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — SEVENT</title>
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
-    <nav id="navprincipal">
-        <div class="logoimg">
-            <p>STREAVENT</p>
+
+  <nav class="nav-principal">
+    <div class="contenedor-nav">
+
+      <div class="nav-izquierda">
+        <div class="marca"><a href="../index.html">SEVENT</a></div>
+        <ul class="menu-principal">
+          <li><a href="eventos.html">Eventos</a></li>
+          <!-- <li><a href="pages/destacados.html">Destacados</a></li> -->
+          <li><a href="contacto.html">Contacto</a></li>
+
+        </ul>
+      </div>
+
+
+      <div class="nav-derecha">
+        <a href="login.html" class="btn-nav">Iniciar Sesión</a>
+        <a href="registro.html" class="btn-nav">Registrarse</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <img src="../img/hero_contacto.jpg" alt="Banner Contacto Sevent" class="hero-imagen" />
+    <div class="hero-texto">
+      <h1>Contacta con nosotros</h1>
+      <p>Envíanos tus sugerencias y opiniones</p>
+    </div>
+  </section>
+
+  <main class="main-contacto">
+    <section class="formulario-contacto">
+      <h2>Rellena este formulario</h2>
+      <p>Y habla con nosotros</p>
+      <form action="#" method="get">
+        <div class="campo">
+          <label for="nombre-contacto">Nombre</label>
+          <input type="text" id="nombre-contacto" name="nombre" placeholder="Tu nombre completo" required />
         </div>
-        <div class="menubar">
-            <ul>
-                <li><a href="./index.html>Inicio" </a></li>
-                <li><a href="eventos.html">Eventos</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
-            </ul>
+
+        <div class="campo">
+          <label for="email-contacto">Email</label>
+          <input type="email" id="email-contacto" name="email" placeholder="usuario@ejemplo.com" required />
         </div>
 
-    </nav>
-    <header id="main-header" class="main-header">
+        <div class="campo">
+          <label for="ciudad-contacto">Ciudad</label>
+          <input type="text" id="ciudad-contacto" name="ciudad" placeholder="Tu ciudad" required />
+        </div>
 
-        <h1 id="h1titulo">Contacto</h1>
-        <p>Envíanos tus comentarios, consultas y opiniones</p>
+        <div class="campo">
+          <label for="asunto-contacto">Asunto</label>
+          <input type="text" id="asunto-contacto" name="asunto" placeholder="Motivo de tu mensaje" required />
+        </div>
 
-    </header>
+        <div class="campo">
+          <label for="mensaje-contacto">Mensaje</label>
+          <textarea id="mensaje-contacto" name="mensaje" rows="5" placeholder="Escribe aquí tu mensaje"
+            required></textarea>
+        </div>
 
-    <main>
-        <section class="formulario-contacto" style="max-width: 30rem; margin: 2rem auto; padding: 0 1rem;">
-            <h2>Contacto</h2>
-            <form action="#" method="get" novalidate>
-                    <label for="nombre-contacto">Nombre</label>
-                    <input type="text" id="nombre-contacto" name="nombre" placeholder="Tu nombre completo" required />
+        <div class="campo">
+          <input type="checkbox" id="aceptar-politica-contacto" name="aceptar-politica" required />
+          <label for="aceptar-politica-contacto">
+            Acepto la <a href="#" target="_blank">Política de Privacidad</a>
+          </label>
+        </div>
 
-                    <label for="email-contacto">Email</label>
-                    <input type="email" id="email-contacto" name="email" placeholder="usuario@ejemplo.com" required />
+        <button type="submit" class="boton-reserva" style="width:100%; margin-top:1rem;"> Enviar </button>
+      </form>
+    </section>
 
-   
-
-                    <label for="asunto-contacto">Asunto</label>
-                    <input type="text" id="asunto-contacto" name="asunto" placeholder="Motivo de tu mensaje" required />
-
-                    <label for="mensaje-contacto">Mensaje</label>
-                    <textarea id="mensaje-contacto" name="mensaje" rows="5" placeholder="Escribe aquí tu mensaje"
-                        required></textarea>
-
-                    <input type="checkbox" id="aceptar-politica-contacto" name="aceptar-politica" required />
-                    <label for="aceptar-politica-contacto">
-                        Acepto la <a href="#" target="_blank">Política de Privacidad</a>
-                    </label>
-
-                <button type="submit" class="boton-reserva" style="width:100%; margin-top:1rem;">
-                    Enviar
-                </button>
-            </form>
-        </section>
-    </main>
-
+  </main>
+  <footer class="pie-pagina">
+    <p>© 2025 Sevent</p>
+  </footer>
 </body>
 
 </html>
