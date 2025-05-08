@@ -25,7 +25,7 @@
     --color-secundario: #8d068d;
     --color-acento: #ff9e0c;
     --color-texto: #333333;
-    --color-gris: #a0a0a0;
+    --color-gris: #c7c7c7;
     --color-blanco: #ffffff;
 
     --fuente-titulos: RalewayBold;
@@ -97,13 +97,16 @@ button {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    cursor: pointer;
 }
 
 .marca a {
     color: var(--color-blanco);
     font-size: 2.5rem;
     font-weight: bold;
+    transition: 0.3s ease;
+}
+.marca a:hover {
+    color: var(--color-acento);
 }
 
 .menu-principal {
@@ -221,11 +224,11 @@ main {
     border: 0.1rem solid var(--color-gris);
     display: flex;
     flex-direction: column;
-    transition: border 0.3s ease;
+    transition:  0.3s;
 }
 
 .tarjeta-evento:hover {
-    border-color: var(--color-secundario);
+    border: 0.2rem solid var(--color-secundario);
 }
 
 .tarjeta-evento img,
@@ -388,7 +391,7 @@ textarea::placeholder {
         display: block;
         order: 2;
         position: fixed;
-        right: 2rem;
+        right: 1.4rem;
         top: 1rem;
     }
 
@@ -426,6 +429,17 @@ textarea::placeholder {
 
     .toggle-menu:checked ~.nav-derecha {
         display: flex;
+    }
+    .hero-texto {
+        padding-top: 1rem;
+        width: 80%;
+
+    }
+    button {
+     text-align: left;
+     padding-left: 1rem;
+     padding-bottom:0.8rem;
+     padding-top:0.8rem
     }
 }
 
