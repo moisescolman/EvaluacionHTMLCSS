@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iniciar Sesión — SEVENT</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+  <nav class="nav-principal">
+    <div class="contenedor-nav">
+      <input type="checkbox" id="boton-menu" class="toggle-menu"/>
+      <label for="boton-menu" class="btn-hamburguesa"></label>
+      <div class="marca">
+        <a href="../index.html">SEVENT</a>
+      </div>
+      <ul class="menu-principal">
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="nav-derecha">
+        <a href="login.html" id="nav-iniciar-sesion" class="btn-nav">Iniciar Sesión</a>
+        <a href="registro.html" id="nav-registrarse" class="btn-nav">Registrarse</a>
+        <a href="mis-eventos.html" id="nav-mis-eventos" class="btn-nav" style="display:none">Mis eventos</a>
+        <button type="button" id="nav-cerrar-sesion" class="btn-nav" style="display:none">Cerrar sesión</button>
+      </div>
+    </div>
+  </nav>
+  <main class="main-login contenedor">
+    <h2>Iniciar Sesión</h2>
+    <form id="form-login" action="#" method="get" class="formulario">
+      <div class="campo">
+        <label for="login-email">Correo electrónico</label>
+        <input type="email" id="login-email" name="email" placeholder="usuario@ejemplo.com" required/>
+      </div>
+      <div class="campo campo-contrasena">
+        <label for="login-contrasena">Contraseña</label>
+        <div class="contenedor-contrasena">
+          <input type="password" id="login-contrasena" name="contrasena" placeholder="Tu contraseña" required/>
+
+        </div>
+      </div>
+     
+      <button type="submit" class="boton-detalles">Entrar</button>
+    </form>
+  </main>
+  <footer class="pie-pagina">
+    <p>© 2025 Sevent</p>
+  </footer>
+  <script src="../js/gestionUsuarios.js" ></script>
+</body>
+</html>

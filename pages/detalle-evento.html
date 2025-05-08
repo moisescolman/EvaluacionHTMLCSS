@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Detalle de Evento - SEVENT</title>
+  <title>Detalle de Evento — SEVENT</title>
   <link rel="stylesheet" href="../css/style.css" />
 </head>
+
 <body>
-    <nav class="nav-principal">
-        <div class="contenedor-nav">
-          
-          <div class="nav-izquierda">
-            <div class="marca"><a href="../index.html">SEVENT</a></div>
-            <ul class="menu-principal">
-              <li><a href="pages/eventos.html">Eventos</a></li>
-              <!-- <li><a href="pages/destacados.html">Destacados</a></li> -->
-              <li><a href="contacto.html">Contacto</a></li>
-    
-            </ul>
-          </div>
-    
-          
-          <div class="nav-derecha">
-            <a href="login.html" class="btn-nav">Iniciar Sesión</a>
-            <a href="registro.html" class="btn-nav">Registrarse</a>
-          </div>
-        </div>
-      </nav>
+  <nav class="nav-principal">
+    <div class="contenedor-nav">
+      <input type="checkbox" id="boton-menu" class="toggle-menu" />
+      <label for="boton-menu" class="btn-hamburguesa"></label>
+      <div class="marca">
+        <a href="../index.html">SEVENT</a>
+      </div>
+      <ul class="menu-principal">
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="nav-derecha">
+        <a href="login.html" id="nav-iniciar-sesion" class="btn-nav">Iniciar Sesión</a>
+        <a href="registro.html" id="nav-registrarse" class="btn-nav">Registrarse</a>
+        <a href="mis-eventos.html" id="nav-mis-eventos" class="btn-nav" style="display:none">Mis eventos</a>
+        <button type="button" id="nav-cerrar-sesion" class="btn-nav" style="display:none">Cerrar sesión</button>
+      </div>
+    </div>
+  </nav>
 
-  <main class="main-detalle">
-
-
+  <main class="main-detalle contenedor">
     <article class="tarjeta-detalle-evento">
-      <img src="../img/events-img/1.avif" alt="Concierto de Jazz al Aire Libre" />
+      <img src="../img/events-img/1.avif" alt="Technarte Bilbao 2025" />
       <div class="contenido-evento">
         <h2>Technarte Bilbao 2025</h2>
         <p class="datos">16/05/2025 • Palacio Euskalduna</p>
         <p class="datos">Máx. participantes: 200</p>
         <p class="datos">Precio: 15 €</p>
-        <p>Artists, designers and researchers from all around the world meet to share their vision of the fusion between art and technology.</p>
+        <p>Artists, designers and researchers from all around the world meet to share their vision of the fusion between
+          art and technology. Technarte Bilbao es el encuentro de innovación y tecnología más grande del norte de
+          España, con ponencias, talleres y networking.</p>
       </div>
     </article>
   </main>
 
   <footer class="pie-pagina">
-    <p>&copy; 2025 Happenix</p>
+    <p>© 2025 Sevent</p>
   </footer>
+
+  <script src="../js/gestionUsuarios.js"></script>
+  <script src="../js/detalleEvento.js"></script>
 </body>
+
 </html>

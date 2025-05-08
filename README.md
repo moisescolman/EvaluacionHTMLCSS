@@ -1,4 +1,4 @@
-****Evaluación HTML CSS****
+****Evaluación HTML, CSS, JavaScript ****
 
 
 Autor: Moisés Colman

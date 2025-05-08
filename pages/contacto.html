@@ -1,88 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contacto — SEVENT</title>
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/style.css"/>
 </head>
-
 <body>
-
   <nav class="nav-principal">
     <div class="contenedor-nav">
-
-      <div class="nav-izquierda">
-        <div class="marca"><a href="../index.html">SEVENT</a></div>
-        <ul class="menu-principal">
-          <li><a href="eventos.html">Eventos</a></li>
-          <!-- <li><a href="pages/destacados.html">Destacados</a></li> -->
-          <li><a href="contacto.html">Contacto</a></li>
-
-        </ul>
+      <input type="checkbox" id="boton-menu" class="toggle-menu"/>
+      <label for="boton-menu" class="btn-hamburguesa"></label>
+      <div class="marca">
+        <a href="../index.html">SEVENT</a>
       </div>
-
-
+      <ul class="menu-principal">
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
       <div class="nav-derecha">
-        <a href="login.html" class="btn-nav">Iniciar Sesión</a>
-        <a href="registro.html" class="btn-nav">Registrarse</a>
+        <a href="login.html" id="nav-iniciar-sesion" class="btn-nav">Iniciar Sesión</a>
+        <a href="registro.html" id="nav-registrarse" class="btn-nav">Registrarse</a>
+        <a href="mis-eventos.html" id="nav-mis-eventos" class="btn-nav" style="display:none">Mis eventos</a>
+        <button type="button" id="nav-cerrar-sesion" class="btn-nav" style="display:none">Cerrar sesión</button>
       </div>
     </div>
   </nav>
 
-  <section class="hero">
-    <img src="../img/hero_contacto.jpg" alt="Banner Contacto Sevent" class="hero-imagen" />
-    <div class="hero-texto">
-      <h1>Contacta con nosotros</h1>
-      <p>Envíanos tus sugerencias y opiniones</p>
-    </div>
-  </section>
-
-  <main class="main-contacto">
+  <main class="main-contacto contenedor">
     <section class="formulario-contacto">
       <h2>Rellena este formulario</h2>
       <p>Y habla con nosotros</p>
-      <form action="#" method="get">
+      <form id="form-contacto" action="#" method="get" class="formulario">
         <div class="campo">
           <label for="nombre-contacto">Nombre</label>
-          <input type="text" id="nombre-contacto" name="nombre" placeholder="Tu nombre completo" required />
+          <input type="text" id="nombre-contacto" name="nombre" placeholder="Tu nombre completo" required/>
         </div>
-
         <div class="campo">
           <label for="email-contacto">Email</label>
-          <input type="email" id="email-contacto" name="email" placeholder="usuario@ejemplo.com" required />
+          <input type="email" id="email-contacto" name="email" placeholder="usuario@ejemplo.com" required/>
         </div>
-
         <div class="campo">
           <label for="ciudad-contacto">Ciudad</label>
-          <input type="text" id="ciudad-contacto" name="ciudad" placeholder="Tu ciudad" required />
+          <input type="text" id="ciudad-contacto" name="ciudad" placeholder="Tu ciudad" required/>
         </div>
-
         <div class="campo">
           <label for="asunto-contacto">Asunto</label>
-          <input type="text" id="asunto-contacto" name="asunto" placeholder="Motivo de tu mensaje" required />
+          <input type="text" id="asunto-contacto" name="asunto" placeholder="Asunto" required/>
         </div>
-
         <div class="campo">
           <label for="mensaje-contacto">Mensaje</label>
-          <textarea id="mensaje-contacto" name="mensaje" rows="5" placeholder="Escribe aquí tu mensaje"
-            required></textarea>
+          <textarea id="mensaje-contacto" name="mensaje" rows="5" placeholder="Escribe aquí tu mensaje" required></textarea>
         </div>
-
         <div class="campo">
-          <input type="checkbox" id="aceptar-politica-contacto" name="aceptar-politica" required />
-          <label for="aceptar-politica-contacto"> Acepto la <a href="#" target="_blank">Política de Privacidad</a></label>
+          <input type="checkbox" id="aceptarpolitica" name="aceptar-politica" required/>
+          <label for="aceptarpolitica">Acepto la Política de Privacidad</label>
         </div>
-
-        <button type="submit" class="boton-detalles"> Enviar </button>
+        <button type="submit" class="boton-detalles" disabled>Enviar</button>
       </form>
     </section>
-
   </main>
+
   <footer class="pie-pagina">
     <p>© 2025 Sevent</p>
   </footer>
-</body>
 
+  <script src="../js/gestionUsuarios.js" ></script>
+  <script src="../js/habilitarBoton.js" ></script>
+</body>
 </html>

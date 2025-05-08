@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Todos los eventos — SEVENT</title>
-  <link rel="stylesheet" href="../css/style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mis eventos — SEVENT</title>
+  <link rel="stylesheet" href="../css/style.css"/>
 </head>
-
 <body>
   <nav class="nav-principal">
     <div class="contenedor-nav">
-      <input type="checkbox" id="boton-menu" class="toggle-menu" />
+      <input type="checkbox" id="boton-menu" class="toggle-menu"/>
       <label for="boton-menu" class="btn-hamburguesa"></label>
       <div class="marca">
         <a href="../index.html">SEVENT</a>
@@ -29,27 +27,15 @@
     </div>
   </nav>
 
-  <section class="hero">
-    <img src="../img/hero_eventos.jpg" alt="Banner Eventos" class="hero-imagen" />
-    <div class="hero-texto">
-      <h1>Encuentra todos los eventos</h1>
-      <p>Explora más, explora todo</p>
-    </div>
-  </section>
-
-  <section class="eventos-destacados">
-    <p id="fecha-actual" class="fecha-eventos"></p>
-    <h2>Todos los eventos de la zona</h2>
-    <div id="contenedor-eventos" class="grid-eventos"></div>
-  </section>
+  <main class="main-mis-eventos contenedor">
+    <h2>Mis eventos</h2>
+    <p>No estás apuntado a ningun evento</p>
+  </main>
 
   <footer class="pie-pagina">
     <p>© 2025 Sevent</p>
   </footer>
-  <script src="../js/mostrarFecha.js" defer></script>
+
   <script src="../js/gestionUsuarios.js" defer></script>
-  <script src="../js/mostrarEventos.js" defer></script>
-
 </body>
-
 </html>
