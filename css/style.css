@@ -29,7 +29,7 @@
     --color-blanco: #ffffff;
 
     --fuente-titulos: RalewayBold;
-    --fuente-totulos2: Raleway;
+    --fuente-titulos2: Raleway;
 
     --fuente-texto: Jost;
 
@@ -49,8 +49,12 @@ body {
     line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
     font-family: var(--fuente-titulos);
+}
+
+h3 {
+    font-family: var(--fuente-titulos2);
 }
 
 a {
@@ -97,6 +101,11 @@ button {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+.btn-hamburguesa:hover {
+
+    background-image: url("../img/burger-menu_hover.svg");
+
 }
 
 .marca a {
