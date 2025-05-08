@@ -53,6 +53,15 @@ const eventos = [
       descripcion: 'La bailaora granaína Eva Manzano visita de nuevo el Club Flamenco #hACERIA donde disfrutaremos de su maestría sobre nuestro Tablao.',
       imagen: '../img/events-img/6.avif',
       enlaceDetalle: '../pages/detalle-evento.html?id=6'
+    },
+    {
+      id: 7,
+      titulo: 'Mysterious Bilbao Outdoor Escape Game',
+      fecha: '08/05/2025',
+      lugar: 'Teatro Arriaga',
+      descripcion: 'Follow clues, solve puzzles, discover new places and learn incredible stories of the city past and present during this city adventure.',
+      imagen: '../img/events-img/7.avif',
+      enlaceDetalle: '../pages/detalle-evento.html?id=7'
     }
   ];
   
@@ -60,7 +69,8 @@ const eventos = [
   document.addEventListener('DOMContentLoaded', () => {
     const contRecomendados = document.getElementById('contenedor-recomendados');
     if (contRecomendados) {
-      const limite = eventos.length < 2 ? eventos.length : 2;
+      // limitar la cantidad de eventos que se muestra en el index
+      const limite = 3;
       for (let i = 0; i < limite; i++) {
         const evento = eventos[i];
         contRecomendados.innerHTML += `
@@ -77,12 +87,12 @@ const eventos = [
       }
     }
   
-    // para la pagina de eventos
-    const contTodos = document.getElementById('contenedor-eventos');
-    if (contTodos) {
-      for (let i = 0; i < eventos.length; i++) {
-        const evento = eventos[i];
-        contTodos.innerHTML += `
+   
+    // para todos los eventos
+    const contenedorEventos = document.getElementById('contenedor-eventos');
+    if (contenedorEventos) {
+      eventos.forEach(evento => {
+        contenedorEventos.innerHTML += `
           <article class="tarjeta-evento">
             <img src="${evento.imagen}" alt="${evento.titulo}"/>
             <div class="contenido-evento">
@@ -93,7 +103,7 @@ const eventos = [
             </div>
           </article>
         `;
-      }
+      })
     }
   });
   

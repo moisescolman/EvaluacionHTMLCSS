@@ -185,6 +185,7 @@ main {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
     transition: background-color 0.3s ease;
+    margin-top: 1rem;
 }
 
 .btn-hero:hover {
@@ -289,6 +290,7 @@ main {
 .formulario-contacto p,
 .main-login h2,
 .main-registro h2 {
+    margin-top: 2rem;
     text-align: center;
 }
 
@@ -331,14 +333,15 @@ textarea::placeholder {
     background-color: var(--color-primario);
     color: var(--color-blanco);
     font-size: 0.9rem;
+    margin-top: 3rem;
 }
 
-.contenedor-contrasena {
+/* .contenedor-contrasena {
     position: relative;
     display: flex;
     align-items: center;
     width: 68%;
-}
+} */
 
 .contenedor-contrasena input {
     flex: 1;
@@ -370,11 +373,15 @@ textarea::placeholder {
         flex-wrap: wrap;
         justify-content: space-between;
         height: auto;
+        min-height: 4rem;
     }
 
     .marca {
         order: 1;
+        /* border: green solid 3px; */
         gap: 4rem;
+        position: absolute;
+        top: 0rem;
     }
 
     .btn-hamburguesa {
@@ -382,7 +389,7 @@ textarea::placeholder {
         order: 2;
         position: fixed;
         right: 2rem;
-        top: 1rem
+        top: 1rem;
     }
 
     .menu-principal,
@@ -391,11 +398,14 @@ textarea::placeholder {
         flex-direction: column;
         width: 100%;
         background-color: var(--color-secundario);
-        border: red solid 1px;
+        /* border: yellow solid 1px; */
+        position: relative;
+        top: 5rem;
     }
 
     .menu-principal {
         order: 3;
+        /* background-color: red; */
     }
 
     .nav-derecha {
@@ -411,6 +421,7 @@ textarea::placeholder {
 
     .toggle-menu:checked ~.menu-principal {
         display: flex;
+        /* background-color: red; */
     }
 
     .toggle-menu:checked ~.nav-derecha {
@@ -426,11 +437,11 @@ textarea::placeholder {
     .menu-principal {
         display: flex;
     }
-
+    
     .nav-derecha {
         display: flex;
     }
-
+    
     .grid-eventos {
         grid-template-columns: repeat(2, 1fr);
     }
